@@ -7,12 +7,3 @@ jdk:
   - openjdk10
   - openjdk11
 sudo: false
-addons:
-  sonarcloud:
-    organization: "ebadmail"
-    token:
-      secure: "6c1618db8398071b3476e69d7f93423ef5478554" # encrypted value of your token
-
-script:
-  # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar
